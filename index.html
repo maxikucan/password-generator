@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google font ¯\_(ツ)_/¯ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="container">
+      <h1>Password Generator!</h1>
+      <h5>Select the length and configurations of your password (⌐■_■)</h5>
+      <div class="lengthSection">
+        <span>Password Length:</span>
+        <input
+          type="number"
+          id="length"
+          value="12"
+          min="1"
+          max="24"
+          class="lengthInput"
+        />
+      </div>
+
+      <div class="checkboxes-section">
+        <div class="control">
+          <label for="lowercase">Include lower case</label>
+          <input type="checkbox" class="checkbox" id="lowerCase" data-ref="control" checked />
+        </div>
+
+        <div class="control">
+          <label for="uppercase">Include upper case</label>
+          <input type="checkbox" class="checkbox" id="upperCase" data-ref="control" />
+        </div>
+
+        <div class="control"> 
+          <label for="number">Include numbers</label>
+          <input type="checkbox" class="checkbox" id="numbers" data-ref="control" />
+        </div>
+
+        <div class="control">
+          <label for="special">Include special characters</label>
+          <input type="checkbox" class="checkbox" id="special" data-ref="control" />
+        </div>
+      </div>
+
+      <input type="text" id="password" readonly />
+
+      <div>
+        <button id="generate" class="btn-primary">Generate!</button>
+        <button id="copy" class="btn-secondary">Copy Password</button>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
