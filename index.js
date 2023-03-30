@@ -18,7 +18,7 @@ const config = {
 
 function generatePassword(length) {
     let charset = "";
-    let finalPassword = [];
+    const finalPassword = [];
 
     if (!config.upperCase && !config.lowerCase && !config.numbers && !config.special) {
         passwordInput.value = 'No allowed characters defined.'
@@ -26,7 +26,7 @@ function generatePassword(length) {
         return;
     }
 
-    // Cargo un string con los caracteres requeridos (excediendo el largo requerido).
+    // Cargo un string con los caracteres requeridos.
     for (let i = 0; i < length; i++) {
         if (config.lowerCase) {
             charset += options.letters.charAt(Math.random() * options.letters.length)
@@ -52,7 +52,7 @@ function generatePassword(length) {
 
     }
 
-    // Desordeno el array
+    // Ordeno el array de forma desordenada.
     finalPassword.sort(() => {
         return 0.5 - Math.random();
     })
